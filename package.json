@@ -1,0 +1,56 @@
+{
+  "name": "playmusic-suite",
+  "version": "1.0.0",
+  "description": "A suite to manage your Google Music Library with your favorite Terminal.",
+  "main": "electron.js",
+  "repository": {
+    "url": "https://github.com/Capevace/playmusic-suite",
+    "type": "git"
+  },
+  "author": "Lukas von Mateffy (@Capevace)",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "build": "webpack",
+    "build-watch": "webpack --watch",
+    "pack": "build --dir",
+    "dist": "build"
+  },
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.4.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-latest": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "electron": "^1.6.2",
+    "webpack": "^2.2.1"
+  },
+  "dependencies": {
+    "fs-extra": "^2.0.0",
+    "material-ui": "^0.17.0",
+    "node-id3": "^0.0.9",
+    "playmusic": "^2.2.1",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-tap-event-plugin": "^2.0.1",
+    "request": "^2.81.0",
+    "slug": "^0.9.1",
+    "styled-components": "^1.4.4",
+    "touch": "^1.0.0"
+  },
+  "babel": {
+    "presets": [
+      "latest",
+      "react"
+    ],
+    "plugins": [
+      "transform-object-rest-spread"
+    ]
+  },
+  "build": {
+    "appId": "de.mateffy.playmusic-suite",
+    "mac": {
+      "category": "Music"
+    }
+  }
+}
